@@ -1,0 +1,43 @@
+/home/cc/miniconda3/envs/torch/bin/python /home/cc/H2O/run_summarization.py
+Namespace(model_name='meta-llama/Meta-Llama-3-8B', enable_h2o_generation=True, num_heavy_hitter_tokens=-1, num_window_length=256, enable_position_rolling=False, sample_num=500, seed=42)
+not assign number of heavy hitter tokens, use half of the cache size: 128
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+2024-10-21:00:10:17,315 WARNING  [other.py:349] Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+2024-10-21:00:10:17,315 INFO     [huggingface.py:129] Using device 'cuda:0'
+2024-10-21:00:10:17,362 INFO     [huggingface.py:481] Using model type 'default'
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+2024-10-21:00:10:17,773 INFO     [huggingface.py:365] Model parallel was set to False, max memory was not set, and device map was set to {'': 'cuda:0'}
+Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.60s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.76it/s]
+2024-10-21:00:10:33,500 INFO     [evaluator.py:164] Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
+2024-10-21:00:10:33,501 INFO     [evaluator.py:217] Using pre-initialized model
+2024-10-21:00:10:35,680 INFO     [__init__.py:459] The tag 'arc_ca' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2024-10-21:00:10:35,686 INFO     [__init__.py:459] The tag 'arc_ca' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2024-10-21:00:10:41,667 INFO     [task.py:415] Building contexts for coqa on rank 0...
+100%|██████████| 500/500 [00:00<00:00, 63694.82it/s]
+2024-10-21:00:10:41,846 INFO     [evaluator.py:489] Running generate_until requests
+Running generate_until requests: 100%|██████████| 500/500 [04:58<00:00,  1.68it/s]
+fatal: not a git repository (or any of the parent directories): .git
+{'coqa': {'alias': 'coqa', 'em,none': 0.5871666666666666, 'em_stderr,none': 0.019300808508579022, 'f1,none': 0.7437195066484114, 'f1_stderr,none': 0.014330112489725318}}
+
+/home/cc/miniconda3/envs/torch/bin/python /home/cc/H2O/run_summarization.py
+Namespace(model_name='meta-llama/Meta-Llama-3-8B', enable_h2o_generation=False, num_heavy_hitter_tokens=-1, num_window_length=256, enable_position_rolling=False, sample_num=500, seed=42)
+not assign number of heavy hitter tokens, use half of the cache size: 128
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+2024-10-21:00:16:57,488 WARNING  [other.py:349] Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+2024-10-21:00:16:57,489 INFO     [huggingface.py:129] Using device 'cuda:0'
+2024-10-21:00:16:57,545 INFO     [huggingface.py:481] Using model type 'default'
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+2024-10-21:00:16:57,959 INFO     [huggingface.py:365] Model parallel was set to False, max memory was not set, and device map was set to {'': 'cuda:0'}
+Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.56s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.54it/s]
+2024-10-21:00:17:12,885 INFO     [evaluator.py:164] Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
+2024-10-21:00:17:12,885 INFO     [evaluator.py:217] Using pre-initialized model
+2024-10-21:00:17:15,060 INFO     [__init__.py:459] The tag 'arc_ca' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2024-10-21:00:17:15,067 INFO     [__init__.py:459] The tag 'arc_ca' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2024-10-21:00:17:21,144 INFO     [task.py:415] Building contexts for coqa on rank 0...
+100%|██████████| 500/500 [00:00<00:00, 67897.56it/s]
+2024-10-21:00:17:21,320 INFO     [evaluator.py:489] Running generate_until requests
+Running generate_until requests: 100%|██████████| 500/500 [03:31<00:00,  2.37it/s]
+fatal: not a git repository (or any of the parent directories): .git
+{'coqa': {'alias': 'coqa', 'em,none': 0.6755, 'em_stderr,none': 0.017543233170089264, 'f1,none': 0.8039662972688821, 'f1_stderr,none': 0.012919306845688984}}
